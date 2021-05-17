@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main()
+{
+    int i=0;
+    char ch[20];
+    scanf("%s",ch);
+    while(ch[i]!='\0')
+    {
+        printf("%c",ch[i]+(25-2*ch[i]%65));
+        i++;
+    }
+    return 0;
+}
