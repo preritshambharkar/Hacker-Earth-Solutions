@@ -1,0 +1,53 @@
+main()
+{
+	int n,t,i,g,p,j,k,cost,count1,count2,max,min;
+	scanf("%d",&t);
+	for(i=0;i<t;i++)
+	{
+		cost=0;
+		count1=0;
+		count2=0;
+		scanf("%d %d",&g,&p);
+		if(g>p)
+		{
+			max=g;
+			min=p;
+		}
+		else
+		{
+			max=p;
+			min=g;
+		}
+		scanf("%d",&n);
+		int a[n][2];
+		for(j=0;j<n;j++)
+		{	
+			for(k=0;k<2;k++)
+			{
+				scanf("%d",&a[j][k]);
+			}
+		}
+		for(j=0;j<n;j++)
+		{	
+			for(k=0;k<2;k++)
+			{
+			    //printf("%d ",a[j][k]);
+			    if(a[j][0]==1)
+				{count1++;}
+				if(a[j][1]==1)
+				{count2++;}
+			}
+		}
+		if(count1>count2)
+		{
+			cost = cost+(count1/2)*min;
+			cost = cost+(count2/2)*max;
+		}
+		else
+		{
+			cost = cost+(count2/2)*min;
+			cost = cost+(count1/2)*max;
+		}
+		printf("%d \n",cost);
+	}
+}
