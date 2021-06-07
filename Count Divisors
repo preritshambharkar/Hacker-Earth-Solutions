@@ -1,0 +1,12 @@
+main()
+{
+	int a,b,c,i,count=0;
+	scanf("%d %d %d",&a,&b,&c);
+	for(i=0;a<=b;i++)
+	{
+		if(a%c==0)
+		count++;
+		a++;
+	}
+	printf("%d",count);
+}
