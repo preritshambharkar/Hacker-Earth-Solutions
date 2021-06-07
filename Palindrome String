@@ -1,0 +1,23 @@
+#include<string.h>
+main()
+{
+  int i,j,n,count=0;
+  char s[100],p[100];
+  scanf("%s",&s);
+  strcpy(p,s);
+  for(i=0;i<strlen(s);i++)
+  {
+    if(s[i] == p[strlen(s)-1-i])
+    {
+      count++;
+    }
+  }
+  if(count==strlen(s))
+  {
+    printf("YES");
+  }
+  else
+  {
+    printf("NO");
+  }
+}
