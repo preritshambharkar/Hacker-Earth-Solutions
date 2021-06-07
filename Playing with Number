@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int i,n,q,l,r,mean;
+	long a[1000000];
+	scanf("%d %d",&n,&q);
+	for(i=1;i<=n;i++)
+	{
+		scanf("%ld",&a[i]);
+	}
+	for(i=1;i<=q;i++)
+	{
+		scanf("%d %d",&l,&r);
+		mean = abs((l+r)/2);
+		printf("%ld",a[mean]);
+	}
+    return 0;
+}
